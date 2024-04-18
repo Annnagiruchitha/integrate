@@ -23,5 +23,5 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: AKIA47CRUJB7NN5WKXXS
           AWS_SECRET_ACCESS_KEY: TL3NF5Homjl3FjAE/zWJLRYiE8EcmkZjOF6kTIPX
-          AWS_DEFAULT_REGION: your-region
+          AWS_DEFAULT_REGION: us-east-1
 
