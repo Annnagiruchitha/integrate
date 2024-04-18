@@ -1,1 +1,27 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Sync Files to S3
+        run: |
+          aws s3 sync . s3://try010
+        env:
+          AWS_ACCESS_KEY_ID: AKIA47CRUJB7NN5WKXXS
+          AWS_SECRET_ACCESS_KEY: TL3NF5Homjl3FjAE/zWJLRYiE8EcmkZjOF6kTIPX
+          AWS_DEFAULT_REGION: your-region
 
